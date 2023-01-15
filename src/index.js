@@ -11,9 +11,12 @@ function conversionRate() {
         ${rateResponse.message}`;
         throw new Error(errorMessage);
       }
-    
+      document.querySelector('convresults').innerText = rateResponse;
     })
     .catch(function(error) {
       document.querySelector('body').innerText = error;
     });
 }
+
+
+
