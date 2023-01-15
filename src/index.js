@@ -24,7 +24,7 @@ function displayExchangeRate(selectedCurrency) {
 function displayConversion(response) {
   let displayConversion = document.querySelector('results');
   displayConversion.innerText= null;
-  
+
 }
 
 
