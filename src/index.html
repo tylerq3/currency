@@ -5,22 +5,20 @@
 </head>
 <body>
   <h1>Convert Currency</h1>
-  <p>Select up to five currencies to exchange</p>
+  <p>Select the amount in USD to convert!</p>
   <form>
-    <input type="checkbox" name="currency" value="CHF" id="swissFranc">
-    <label for="swissFranc">Swiss Franc</label><br>
-    <input type="checkbox" name="currency" value="MXN" id="mexicanPeso">
-    <label for="mexicanPeso">Mexican Peso</label><br>
-    <input type="checkbox" name="currency" value="NGN" id="nigerianNaira">
-    <label for="nigerianNaira">Nigerian Naira</label><br>
-    <input type="checkbox" name="currency" value="AUD" id="australianDollar">
-    <label for="australianDollar">Australian Dollar</label><br>
-    <input type="checkbox" name="currency" value="SGD" id="singaporeDollar">
-    <label for="singaporeDollar">Singapore Dollar</label><br>
-    <input type="checkbox" name="currency" value="QAR" id="qatariRiyal">
-    <label for="qatariRiyal">Qatari Riyal</label><br>
-    <input type="checkbox" name="currency" value="VND" id="vietnameseDong">
-    <label for="vietnameseDong">Vietnamese Dong</label><br>
+    <input type="number" name="amountUSD" id="amountUSD"></input>
+    <label for="amountUSD"></label><br>
+    <select name="selectedCurrency" id="selectedCurrency">
+      <option value="CHF">Swiss Franc</option>
+      <option value="NGN">Nigerian Naira</option>
+      <option value="AUD">Australian Dollar</option>
+      <option value="SGD">Singapore Dollar</option>
+      <option value="QAR">Qatari Riyal</option>
+      <option value="VND">Vietnamese Dong</option>
+      <option value="MXN">Mexican Peso</option>
+      <option value="CAD">Candadian</option>
+    </select>
     <button type="submit">Convert!</button>
   </form>
   <p id="results"></p>

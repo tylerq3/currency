@@ -24,15 +24,23 @@ function displayExchangeRate(selectedCurrency) {
 function displayConversion(response) {
   let displayConversion = document.querySelector('results');
   displayConversion.innerText= null;
-
+  if (selectedCurrency.length > 5) {
+    displayConversion.innerText = `Please select 5 or fewer currencies.`;
+  } else {
+    
+  }
 }
 
 
 function handleForm(event) {
   event.preventDefault(); 
-  conversionRate();
+  const amountUSD = document.getElementById('amountUSD').value;
+  const selectedCurrency = document.getElementById('selectedCurrency').value; 
+  console.log(amountUSD)
+  displayExchangeRate(selectedCurrency);
 }
 
 window.addEventListener('load', function() {
+
   document.querySelector('form').addEventListener('submit', handleForm);
 });
